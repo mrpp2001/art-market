@@ -6,7 +6,7 @@ import Right from "./Right";
 const MainBody = () => {
   return (
     <>
-      <div className="flex gap-8 justify-center ">
+      <div className="flex gap-5 justify-center ">
         <div>
           <Left />
         </div>

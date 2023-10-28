@@ -6,25 +6,30 @@ import {
   BsHeartFill,
   BsChat,
 } from "react-icons/bs";
-import { LuSettings2 } from "react-icons/lu";
-import { PiShareFat } from "react-icons/pi";
+
+import search from "../assets/search.svg";
+import filters from "../assets/filters.svg";
+import like from "../assets/like.svg";
+import comment from "../assets/comment.svg";
+import share from "../assets/share.svg";
+import unlike from "../assets/unlike.svg";
 
 const Main = () => {
   return (
     <>
-      <div className="flex flex-col  h-screen text-sm gap-7 w-auto">
+      <div className="flex flex-col my-2 gap-5  h-screen text-sm  w-auto">
         <a
           className="flex relative justify-center w-[39rem] items-center"
           href=""
         >
-          <BsSearch className="absolute text-lg left-8 cursor-pointer" />
+          <img className="absolute w-6 left-8 cursor-pointer" src={search} alt="" />
           <input
             className="w-full py-6 px-16 h-20 bg-white rounded-lg "
             type="search"
             placeholder="Search here..."
           />
           <button className="absolute flex text-mg gap-2 h-full right-8 justify-center items-center">
-            <LuSettings2 className="m-1" />
+            <img className="m-1" src={filters} alt="" />
             Filters
           </button>
         </a>
@@ -59,8 +64,7 @@ const Main = () => {
                 </p>
 
                 <div className="relative">
-                  <BsHeart className="text-2xl text-white  absolute right-5 top-5" />
-                  {/* <BsHeartFill className="text-3xl text-red-500  absolute right-5 top-5"/> */}
+                  <img className="text-2xl text-white  absolute right-5 top-5" src={unlike} alt="" />
                   <img
                     className="rounded-lg h-72 w-full"
                     src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
@@ -71,15 +75,15 @@ const Main = () => {
 
               <div className="flex gap-5 p-8">
                 <p className="flex gap-3 text-xl">
-                  <BsHeart className="my-1" />
+                  <img src={like} alt="" />
                   <span>9.8k</span>
                 </p>
                 <p className="flex gap-3 text-xl">
-                  <BsChat className="my-1" />
+                <img src={comment} alt="" />
                   <span>8.6k</span>
                 </p>
                 <p className="flex gap-3 text-xl">
-                  <PiShareFat className="my-1" />
+                <img src={share} alt="" />
                   <span>7.2k</span>
                 </p>
               </div>
@@ -87,7 +91,7 @@ const Main = () => {
 
            
             {/* POST 1 */}
-            <div className=" rounded-lg bg-white  h-[37.5rem]">
+            <div className=" rounded-lg bg-white">
               <div className="flex flex-col gap-8 p-8 border-b-2 border-gray-200">
                 <div className="flex justify-between">
                   <a className=" flex gap-3" href="#">
@@ -113,8 +117,7 @@ const Main = () => {
                 </p>
 
                 <div className="relative">
-                  <BsHeart className="text-2xl text-white  absolute right-5 top-5" />
-                  {/* <BsHeartFill className="text-3xl text-red-500  absolute right-5 top-5"/> */}
+                  <img className="text-2xl text-white  absolute right-5 top-5" src={unlike} alt="" />
                   <img
                     className="rounded-lg h-72 w-full"
                     src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
@@ -125,15 +128,15 @@ const Main = () => {
 
               <div className="flex gap-5 p-8">
                 <p className="flex gap-3 text-xl">
-                  <BsHeart className="my-1" />
+                  <img src={like} alt="" />
                   <span>9.8k</span>
                 </p>
                 <p className="flex gap-3 text-xl">
-                  <BsChat className="my-1" />
+                <img src={comment} alt="" />
                   <span>8.6k</span>
                 </p>
                 <p className="flex gap-3 text-xl">
-                  <PiShareFat className="my-1" />
+                <img src={share} alt="" />
                   <span>7.2k</span>
                 </p>
               </div>
