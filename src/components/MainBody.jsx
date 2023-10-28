@@ -6,14 +6,14 @@ import Right from "./Right";
 const MainBody = () => {
   return (
     <>
-      <div className="grid grid-cols-8 gap-7 mx-40 my-8 ">
-        <div className=" col-span-2" >
+      <div className="flex gap-8 justify-center ">
+        <div>
           <Left />
         </div>
-        <div className=" col-span-4">
+        <div>
           <Main />
         </div>
-        <div className=" col-span-2" >
+        <div>
           <Right />
         </div>
       </div>
