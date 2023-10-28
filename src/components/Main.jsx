@@ -147,92 +147,135 @@ const Main = () => {
 
           {/* /////////////////////////  scrollbar //////////////////////////// */}
 
-          <div className="flex gap-5 h-fit mt-5 overflow-x-auto">
-            <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
+          <div className="flex gap-4 mt-5 overflow-x-auto no-scrollbar">
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
               <img
-                className="rounded-lg "
+                className="rounded-lg h-44"
                 src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
                 alt=""
               />
               <p className="text-xs font-bold">
                 Modern Wall Decor Framed Painting
               </p>
-              <div className="flex justify-between">
-                <p className="text-xl font-bold">
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
                   $<span>199.99</span>
                 </p>
-                <p className="m-1">⭐⭐⭐⭐⭐</p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
+
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
               <img
-                className="rounded-lg "
+                className="rounded-lg h-44"
                 src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
                 alt=""
               />
               <p className="text-xs font-bold">
                 Modern Wall Decor Framed Painting
               </p>
-              <div className="flex justify-between">
-                <p className="text-xl font-bold">
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
                   $<span>199.99</span>
                 </p>
-                <p className="m-1">⭐⭐⭐⭐⭐</p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
+
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
               <img
-                className="rounded-lg "
+                className="rounded-lg h-44"
                 src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
                 alt=""
               />
               <p className="text-xs font-bold">
                 Modern Wall Decor Framed Painting
               </p>
-              <div className="flex justify-between">
-                <p className="text-xl font-bold">
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
                   $<span>199.99</span>
                 </p>
-                <p className="m-1">⭐⭐⭐⭐⭐</p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
+
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
               <img
-                className="rounded-lg "
+                className="rounded-lg h-44"
                 src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
                 alt=""
               />
               <p className="text-xs font-bold">
                 Modern Wall Decor Framed Painting
               </p>
-              <div className="flex justify-between">
-                <p className="text-xl font-bold">
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
                   $<span>199.99</span>
                 </p>
-                <p className="m-1">⭐⭐⭐⭐⭐</p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
+
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
               <img
-                className="rounded-lg "
+                className="rounded-lg h-44"
                 src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
                 alt=""
               />
               <p className="text-xs font-bold">
                 Modern Wall Decor Framed Painting
               </p>
-              <div className="flex justify-between">
-                <p className="text-xl font-bold">
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
                   $<span>199.99</span>
                 </p>
-                <p className="m-1">⭐⭐⭐⭐⭐</p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
+
+
+
+
+            <div className="flex flex-col gap-3  h-full rounded-lg">
+              <img
+                className="rounded-lg h-44"
+                src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?size=626&ext=jpg&ga=GA1.1.550779275.1698437704&semt=sph"
+                alt=""
+              />
+              <p className="text-xs font-bold">
+                Modern Wall Decor Framed Painting
+              </p>
+              <div className="flex gap-16">
+                <p className="text-2xl font-bold">
+                  $<span>199.99</span>
+                </p>
+                <p className="my-2 text-sm">⭐⭐⭐⭐⭐</p>
+              </div>
+            </div>
+
+
+
+
+
           </div>
+
+
+
+
         </div>
       </div>
     </>
