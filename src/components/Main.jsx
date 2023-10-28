@@ -16,7 +16,7 @@ import art4 from "../assets/art/chris-art.png";
 import art5 from "../assets/art/Emilie-art.png";
 import art6 from "../assets/art/jessica-art.png";
 
-import user1 from "../assets/user/lara-Leones.png";
+import user1 from "../assets/user/Lara-Leones.png";
 import user2 from "../assets/user/Thomas-J.png";
 
 // Art Post
