@@ -3,10 +3,10 @@ import React from "react";
 const Right = () => {
   return (
     <>
-      <button className="rounded-lg w-full h-20 mb-10 bg-[#88C2BB] text-white hover:bg-teal-400 font-semibold">
+      <button className="rounded-lg w-full h-20 mb-7 bg-[#88C2BB] text-white hover:bg-teal-400 font-semibold">
         Become a Seller
       </button>
-      <div className="flex flex-col text-sm gap-4 w-auto ">
+      <div className="flex flex-col h-[78vh] text-sm gap-4 w-auto ">
         <div className="flex gap-4">
           <a className="hover:font-bold focus:font-bold " href="#">
             Artists

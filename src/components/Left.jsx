@@ -10,7 +10,7 @@ const Left = () => {
   return (
     <>
     
-    <div className=" flex flex-col h-screen text-sm gap-10 ">
+    <div className=" flex flex-col h-[92vh] text-sm gap-7 ">
         <div className="flex justify-start h-20 py-6 px-8 bg-white rounded-lg">
           <h1 className="text-3xl">LOGO</h1>
         </div>

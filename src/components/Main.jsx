@@ -12,7 +12,7 @@ import { PiShareFat } from "react-icons/pi";
 const Main = () => {
   return (
     <>
-      <div className="flex flex-col  text-sm gap-10 w-auto">
+      <div className="flex flex-col  text-sm gap-7 w-auto">
         <a className="flex relative justify-center h-20 items-center" href="">
           <BsSearch className="absolute text-lg left-10 cursor-pointer" />
           <input
@@ -26,7 +26,11 @@ const Main = () => {
           </button>
         </a>
 
-        <div className="flex flex-col gap-8 rounded-lg overflow-auto h-screen no-scrollbar ">
+
+{/* add h-screen to parent element */}
+        <div className="overflow-auto h-screen no-scrollbar">
+
+        <div className="flex flex-col gap-5 rounded-lg  ">
           {/* POST 1 */}
           <div className="rounded-lg bg-white">
             <div className="flex flex-col gap-6 p-7 border-b-2 border-gray-200">
@@ -132,7 +136,7 @@ const Main = () => {
 
 {/* /////////////////////////  scrollbar //////////////////////////// */}
 
-        <div className="flex gap-5 h-fit overflow-x-auto">
+        <div className="flex gap-5 h-fit mt-5 overflow-x-auto">
 
             
           <div className="flex flex-col gap-3 w-72 h-full rounded-lg">
@@ -237,6 +241,7 @@ const Main = () => {
           </div>
 
           
+        </div>
           
         </div>
       </div>

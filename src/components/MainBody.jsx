@@ -6,7 +6,7 @@ import Right from "./Right";
 const MainBody = () => {
   return (
     <>
-      <div className="grid grid-cols-8 gap-10 mx-40 my-8 ">
+      <div className="grid grid-cols-8 gap-7 mx-40 my-8 ">
         <div className=" col-span-2" >
           <Left />
         </div>
