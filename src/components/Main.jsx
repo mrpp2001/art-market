@@ -8,7 +8,7 @@ import comment from "../assets/comment.svg";
 import share from "../assets/share.svg";
 import unlike from "../assets/unlike.svg";
 
-import art1 from "../assets/art/Lara-art.png";
+import art1 from "../assets/art/lara-art.png";
 import art2 from "../assets/art/thomas-art.png";
 
 import art3 from "../assets/art/thomas-ed-art.png";
@@ -16,7 +16,7 @@ import art4 from "../assets/art/chris-art.png";
 import art5 from "../assets/art/Emilie-art.png";
 import art6 from "../assets/art/jessica-art.png";
 
-import user1 from "../assets/user/Lara-Leones.png";
+import user1 from "../assets/user/lara-Leones.png";
 import user2 from "../assets/user/Thomas-J.png";
 
 // Art Post
