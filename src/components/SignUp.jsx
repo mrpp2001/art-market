@@ -47,7 +47,7 @@ const SignUp = () => {
 
   return (
     <>
-      <ToastContainer />
+   
       <section className="font-sans">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
@@ -144,6 +144,8 @@ const SignUp = () => {
           </div>
         </div>
       </section>
+      
+   <ToastContainer />
     </>
   );
 };
