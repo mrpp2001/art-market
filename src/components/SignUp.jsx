@@ -7,7 +7,7 @@ import { auth } from "./firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Signup = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
@@ -148,4 +148,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
