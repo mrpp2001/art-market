@@ -4,6 +4,9 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 import { auth } from "./firebase";
 
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -12,15 +15,13 @@ const Signup = () => {
     email: "",
     pass: "",
   });
-  const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
     if (!values.name || !values.email || !values.pass) {
-      setErrorMsg("Fill all fields");
+      toast.error('Please fill all the details')
       return;
     }
-    setErrorMsg("");
 
     setSubmitButtonDisabled(true);
     createUserWithEmailAndPassword(auth, values.email, values.pass)
@@ -34,7 +35,7 @@ const Signup = () => {
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
-        setErrorMsg(err.message);
+        toast.error(err.message);
       });
   };
 
@@ -44,10 +45,8 @@ const Signup = () => {
     <>
 
 
-    {/* error message */}
-    <b className='text-2xl font-bold text-red-600'>{errorMsg}</b>
 
-
+    <ToastContainer />
      <section className='font-sans'>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">

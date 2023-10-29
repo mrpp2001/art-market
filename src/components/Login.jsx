@@ -4,6 +4,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { auth } from "./firebase";
 
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
 
@@ -17,7 +20,8 @@ const Login = () => {
 
   const handleSubmission = () => {
     if (!values.email || !values.pass) {
-      setErrorMsg("Fill all fields");
+
+      toast.error('Please fill all the details')
       return;
     }
     setErrorMsg("");
@@ -26,28 +30,20 @@ const Login = () => {
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        
+        toast.success('Login successfully.');
         navigate("/page");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
-        setErrorMsg(err.message);
+        toast.error('Invalid email or password')
       });
   };
-
-
-
-
 
 
   return (
     <>
 
-    {/* error message */}
-    <b className='text-2xl font-bold text-red-600'>{errorMsg}</b>
-
-
-
+    <ToastContainer />
 
       <section className="font-sans">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
