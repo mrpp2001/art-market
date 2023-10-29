@@ -1,4 +1,3 @@
-
 import favorite from "../assets/favorite.svg";
 import heart from "../assets/heart.svg";
 import home from "../assets/home.svg";
@@ -9,7 +8,22 @@ import notification from "../assets/notification.svg";
 import profile from "../assets/profile.svg";
 import setting from "../assets/setting.svg";
 
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 const Left = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Logout Error: ", error);
+      });
+  };
+
   return (
     <>
       <div className=" flex flex-col h-[44rem] my-2 gap-5 w-64 text-sm ">
@@ -69,17 +83,19 @@ const Left = () => {
           >
             <img src={setting} className="text-xl my-0.5" alt="" /> Settings
           </a>
-          <button className="flex gap-3 text-base py-1.5 px-8 absolute bottom-5 text-green-300 focus:text-green-500 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 hover:font-bold focus:font-bold">
+          <button
+            className="flex gap-3 text-base py-1.5 px-8 absolute bottom-5 text-green-300 focus:text-green-500 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 hover:font-bold focus:font-bold"
+            onClick={handleLogout}
+          >
             <img src={logout} className="text-xl my-1" alt="" /> log out
           </button>
         </div>
       </div>
-    
+
       <div className="flex justify-between text-gray-500 text-xs">
         <p>2022©logo name</p>
         <p>Developed by ivan Infotech</p>
       </div>
-     
     </>
   );
 };

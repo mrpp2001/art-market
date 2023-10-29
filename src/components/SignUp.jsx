@@ -1,8 +1,53 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-const SignUp = () => {
+import { auth } from "./firebase";
+
+
+const Signup = () => {
+  const navigate = useNavigate();
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    pass: "",
+  });
+  const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+
+  const handleSubmission = () => {
+    if (!values.name || !values.email || !values.pass) {
+      setErrorMsg("Fill all fields");
+      return;
+    }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    createUserWithEmailAndPassword(auth, values.email, values.pass)
+      .then(async (res) => {
+        setSubmitButtonDisabled(false);
+        const user = res.user;
+        await updateProfile(user, {
+          displayName: values.name,
+        });
+        navigate("/page");
+      })
+      .catch((err) => {
+        setSubmitButtonDisabled(false);
+        setErrorMsg(err.message);
+      });
+  };
+
+
+
   return (
     <>
+
+
+    {/* error message */}
+    <b className='text-2xl font-bold text-red-600'>{errorMsg}</b>
+
+
      <section className='font-sans'>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
@@ -25,6 +70,9 @@ const SignUp = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="Enter your name"
                     required=""
+
+                    onChange={(event) =>
+                      setValues((prev) => ({ ...prev, name: event.target.value }))}
                   />
                 </div>
                 <div>
@@ -41,6 +89,10 @@ const SignUp = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
                     required=""
+
+                    onChange={(event) =>
+                      setValues((prev) => ({ ...prev, email: event.target.value }))
+                    }
                   />
                 </div>
                 <div>
@@ -57,22 +109,30 @@ const SignUp = () => {
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     required=""
+
+                    onChange={(event) =>
+                      setValues((prev) => ({ ...prev, pass: event.target.value }))
+                    }
                   />
                 </div>
                 <button
                   type="submit"
                   className="w-full text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+
+                  onClick={handleSubmission} disabled={submitButtonDisabled}
                 >
                   Sign up
                 </button>
                 <p className="text-sm font-light text-gray-500">
                  Already have account?{" "}
-                  <a
+                  <Link
                     href="#"
                     className="font-medium text-red-500 hover:underline "
+
+                    to="/"
                   >
-                    Sign in
-                  </a>
+                    Log in
+                  </Link>
                 </p>
               </form>
             </div>
@@ -85,4 +145,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default Signup
