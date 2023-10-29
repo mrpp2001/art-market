@@ -5,45 +5,38 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-
   const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
     pass: "",
   });
-  const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
     if (!values.email || !values.pass) {
-
-      toast.error('Please fill all the details')
+      toast.error("Please fill all the details");
       return;
     }
-    setErrorMsg("");
 
     setSubmitButtonDisabled(true);
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        toast.success('Login successfully.');
+        toast.success("Login successfully.");
         navigate("/page");
       })
-      .catch((err) => {
+      .catch(() => {
         setSubmitButtonDisabled(false);
-        toast.error('Invalid email or password')
+        toast.error("Invalid email or password");
       });
   };
 
-
   return (
     <>
-
-    <ToastContainer />
+      <ToastContainer />
 
       <section className="font-sans">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -67,9 +60,11 @@ const Login = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
                     required=""
-
                     onChange={(event) =>
-                      setValues((prev) => ({ ...prev, email: event.target.value }))
+                      setValues((prev) => ({
+                        ...prev,
+                        email: event.target.value,
+                      }))
                     }
                   />
                 </div>
@@ -87,18 +82,20 @@ const Login = () => {
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     required=""
-
                     onChange={(event) =>
-                      setValues((prev) => ({ ...prev, pass: event.target.value }))
+                      setValues((prev) => ({
+                        ...prev,
+                        pass: event.target.value,
+                      }))
                     }
                   />
                 </div>
-            
+
                 <button
                   type="submit"
                   className="w-full text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-
-                  disabled={submitButtonDisabled} onClick={handleSubmission}
+                  disabled={submitButtonDisabled}
+                  onClick={handleSubmission}
                 >
                   Log in
                 </button>

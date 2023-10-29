@@ -5,8 +5,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "./firebase";
 
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ const Signup = () => {
 
   const handleSubmission = () => {
     if (!values.name || !values.email || !values.pass) {
-      toast.error('Please fill all the details')
+      toast.error("Please fill all the details");
       return;
     }
 
@@ -39,15 +38,10 @@ const Signup = () => {
       });
   };
 
-
-
   return (
     <>
-
-
-
-    <ToastContainer />
-     <section className='font-sans'>
+      <ToastContainer />
+      <section className="font-sans">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -69,9 +63,12 @@ const Signup = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="Enter your name"
                     required=""
-
                     onChange={(event) =>
-                      setValues((prev) => ({ ...prev, name: event.target.value }))}
+                      setValues((prev) => ({
+                        ...prev,
+                        name: event.target.value,
+                      }))
+                    }
                   />
                 </div>
                 <div>
@@ -88,9 +85,11 @@ const Signup = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
                     required=""
-
                     onChange={(event) =>
-                      setValues((prev) => ({ ...prev, email: event.target.value }))
+                      setValues((prev) => ({
+                        ...prev,
+                        email: event.target.value,
+                      }))
                     }
                   />
                 </div>
@@ -108,26 +107,27 @@ const Signup = () => {
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     required=""
-
                     onChange={(event) =>
-                      setValues((prev) => ({ ...prev, pass: event.target.value }))
+                      setValues((prev) => ({
+                        ...prev,
+                        pass: event.target.value,
+                      }))
                     }
                   />
                 </div>
                 <button
                   type="submit"
                   className="w-full text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-
-                  onClick={handleSubmission} disabled={submitButtonDisabled}
+                  onClick={handleSubmission}
+                  disabled={submitButtonDisabled}
                 >
                   Sign up
                 </button>
                 <p className="text-sm font-light text-gray-500">
-                 Already have account?{" "}
+                  Already have account?{" "}
                   <Link
                     href="#"
                     className="font-medium text-red-500 hover:underline "
-
                     to="/"
                   >
                     Log in
@@ -138,10 +138,8 @@ const Signup = () => {
           </div>
         </div>
       </section>
-    
-    
     </>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

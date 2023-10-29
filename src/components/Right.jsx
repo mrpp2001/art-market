@@ -1,4 +1,3 @@
-
 import user1 from "../assets/user/Thomas-Edward.png";
 import user2 from "../assets/user/Chris-Doe.png";
 import user3 from "../assets/user/Emilie-Jones.png";
@@ -94,7 +93,11 @@ const Right = () => {
         <div className="flex flex-col gap-6 h-screen overflow-auto">
           {Artist.map((art) => (
             <div key={art.id} className="relative flex h-36 w-60">
-              <img className="bg-cover rounded-xl brightness-50" src={art.art} alt="" />
+              <img
+                className="bg-cover rounded-xl brightness-50"
+                src={art.art}
+                alt=""
+              />
               <a
                 className="absolute flex gap-3 bottom-0 m-4 text-white"
                 href="#"

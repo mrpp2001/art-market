@@ -35,53 +35,51 @@ const Left = () => {
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={home} className="text-xl my-0.5" alt="" />
+            <img src={home} alt="" />
             Home
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={notification} className="text-xl my-0.5" alt="" />{" "}
-            Notifications
+            <img src={notification} alt="" /> Notifications
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={heart} className="text-xl my-0.5" alt="" /> Shop
+            <img src={heart} className="text-xl my-0.5 " alt="" /> Shop
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={message} className="text-xl my-0.5" alt="" />
+            <img src={message} alt="" />
             Conversation
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={wallet} className="text-xl my-0.5" alt="" /> Wallet
+            <img src={wallet} alt="" /> Wallet
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={favorite} className="text-xl my-0.5" alt="" />{" "}
-            Subscription
+            <img src={favorite} alt="" /> Subscription
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={profile} className="text-xl my-0.5" alt="" /> My Profile
+            <img src={profile} alt="" /> My Profile
           </a>
           <a
             className="flex gap-3 text-base py-1.5 px-8 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 text-gray-400 hover:text-black focus:text-black hover:font-bold focus:font-bold"
             href="#"
           >
-            <img src={setting} className="text-xl my-0.5" alt="" /> Settings
+            <img src={setting} alt="" /> Settings
           </a>
           <button
             className="flex gap-3 text-base py-1.5 px-8 absolute bottom-5 text-green-300 focus:text-green-500 hover:border-l-4 focus:border-l-4 hover:border-green-200 focus:border-green-200 hover:font-bold focus:font-bold"

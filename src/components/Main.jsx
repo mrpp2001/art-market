@@ -120,11 +120,8 @@ const Main = () => {
           </button>
         </a>
 
-        
         <div className="overflow-auto w-[39rem] no-scrollbar">
           <div className="flex flex-col gap-5 rounded-lg  ">
-        
-
             {Posts.map((post) => (
               <div key={post.id} className=" rounded-lg bg-white  ">
                 <div className="flex flex-col gap-4 p-6 border-b-2 border-gray-200">
@@ -178,20 +175,16 @@ const Main = () => {
                 </div>
               </div>
             ))}
-  
           </div>
 
           <div className="flex gap-4 mt-5 overflow-x-auto no-scrollbar">
             {RecArtist.map((rec) => (
-              <div key={rec.id} className="flex flex-col gap-3  h-full rounded-lg">
-                <img
-                  className="rounded-lg h-44"
-                  src={rec.art}
-                  alt="art"
-                />
-                <p className="text-xs font-bold">
-                 {rec.title}
-                </p>
+              <div
+                key={rec.id}
+                className="flex flex-col gap-3 h-full rounded-lg"
+              >
+                <img className="rounded-lg h-44" src={rec.art} alt="art" />
+                <p className="text-xs font-bold">{rec.title}</p>
                 <div className="flex gap-16">
                   <p className="text-2xl font-bold">
                     $<span>{rec.cost}</span>
@@ -200,7 +193,6 @@ const Main = () => {
                 </div>
               </div>
             ))}
-          
           </div>
         </div>
       </div>
