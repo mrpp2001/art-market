@@ -177,11 +177,11 @@ const Main = () => {
             ))}
           </div>
 
-          <div className="flex gap-4 mt-5 overflow-x-auto no-scrollbar">
+          <div className="flex flex-nowrap gap-4 mt-5 overflow-x-auto no-scrollbar">
             {RecArtist.map((rec) => (
               <div
                 key={rec.id}
-                className="flex flex-col gap-3 h-full rounded-lg"
+                className="flex flex-col ease-in-out gap-3 h-full rounded-lg"
               >
                 <img className="rounded-lg h-44" src={rec.art} alt="art" />
                 <p className="text-xs font-bold">{rec.title}</p>
