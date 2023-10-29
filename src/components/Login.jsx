@@ -48,7 +48,7 @@ const Login = () => {
               <form className="space-y-4 md:space-y-6" action="#">
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Your email
@@ -70,7 +70,7 @@ const Login = () => {
                 </div>
                 <div>
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
                     Password
@@ -92,7 +92,7 @@ const Login = () => {
                 </div>
 
                 <button
-                  type="submit"
+                  type="button"
                   className="w-full text-white bg-green-400 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   disabled={submitButtonDisabled}
                   onClick={handleSubmission}

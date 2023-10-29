@@ -22,6 +22,10 @@ const Signup = () => {
       return;
     }
 
+    if (submitButtonDisabled) {
+      return; // Prevent multiple submissions
+    }
+
     setSubmitButtonDisabled(true);
     createUserWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
@@ -35,6 +39,9 @@ const Signup = () => {
       .catch((err) => {
         setSubmitButtonDisabled(false);
         toast.error(err.message);
+      })
+      .finally(() => {
+        setSubmitButtonDisabled(false);
       });
   };
 
