@@ -1,10 +1,3 @@
-import React from "react";
-import { BiHome, BiBell, BiUser, BiLogOutCircle } from "react-icons/bi";
-import { AiOutlineHeart } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsWallet2 } from "react-icons/bs";
-import { MdOutlineStars } from "react-icons/md";
-import { LuSettings } from "react-icons/lu";
 
 import favorite from "../assets/favorite.svg";
 import heart from "../assets/heart.svg";
@@ -21,7 +14,7 @@ const Left = () => {
     <>
       <div className=" flex flex-col h-[44rem] my-2 gap-5 w-64 text-sm ">
         <div className="flex justify-start h-20 py-6 px-8 bg-white rounded-lg">
-          <h1 className="text-3xl">LOGO</h1>
+          <h1 className="text-3xl font-Cinzel font-semibold">LOGO</h1>
         </div>
         <div className="flex flex-col gap-5 py-8 h-screen rounded-lg bg-white relative ">
           <a

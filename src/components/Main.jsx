@@ -102,12 +102,12 @@ const Main = () => {
       <div className="flex flex-col my-2 gap-5  h-screen text-sm  w-auto">
         <a
           className="flex relative justify-center w-[39rem] items-center"
-          href=""
+          href="#"
         >
           <img
             className="absolute w-6 left-8 cursor-pointer"
             src={search}
-            alt=""
+            alt="search icon"
           />
           <input
             className="w-full py-6 px-16 h-20 bg-white rounded-lg "
@@ -115,7 +115,7 @@ const Main = () => {
             placeholder="Search here..."
           />
           <button className="absolute flex text-mg gap-2 h-full right-8 justify-center items-center">
-            <img className="m-1" src={filters} alt="" />
+            <img className="m-1" src={filters} alt="filter button" />
             Filters
           </button>
         </a>
@@ -126,14 +126,14 @@ const Main = () => {
         
 
             {Posts.map((post) => (
-              <div key={post.id} className=" rounded-lg bg-white  h-[37.5rem]">
-                <div className="flex flex-col gap-8 p-8 border-b-2 border-gray-200">
+              <div key={post.id} className=" rounded-lg bg-white  ">
+                <div className="flex flex-col gap-4 p-6 border-b-2 border-gray-200">
                   <div className="flex justify-between">
                     <a className=" flex gap-3" href="#">
                       <img
                         className="w-12 rounded-lg"
                         src={post.userImg}
-                        alt=""
+                        alt="user img"
                       />
                       <div>
                         <p className="text-xl font-bold">{post.userName}</p>
@@ -145,34 +145,34 @@ const Main = () => {
 
                   <p className="text-sm">
                     {post.desc}
-                    <span className=" text-red-400">Read More</span>
+                    <span className=" text-red-400"> Read More</span>
                   </p>
 
                   <div className="relative">
                     <img
                       className="text-2xl text-white  absolute right-5 top-5"
                       src={unlike}
-                      alt=""
+                      alt="like"
                     />
                     <img
                       className="rounded-lg h-72 w-full"
                       src={post.art}
-                      alt=""
+                      alt="picture"
                     />
                   </div>
                 </div>
 
-                <div className="flex gap-5 p-8">
+                <div className="flex gap-5 px-8 py-5">
                   <p className="flex gap-3 text-xl">
-                    <img src={like} alt="" />
+                    <img src={like} alt="likes" />
                     <span>{post.likes} k</span>
                   </p>
                   <p className="flex gap-3 text-xl">
-                    <img src={comment} alt="" />
+                    <img src={comment} alt="comments" />
                     <span>{post.comments} k</span>
                   </p>
                   <p className="flex gap-3 text-xl">
-                    <img src={share} alt="" />
+                    <img src={share} alt="share" />
                     <span>{post.share} k</span>
                   </p>
                 </div>
@@ -187,7 +187,7 @@ const Main = () => {
                 <img
                   className="rounded-lg h-44"
                   src={rec.art}
-                  alt=""
+                  alt="art"
                 />
                 <p className="text-xs font-bold">
                  {rec.title}

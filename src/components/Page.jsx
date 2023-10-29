@@ -3,7 +3,7 @@ import Left from "./Left";
 import Main from "./Main";
 import Right from "./Right";
 
-const MainBody = () => {
+const Page = () => {
   return (
     <>
       <div className="flex gap-5 justify-center ">
@@ -21,4 +21,4 @@ const MainBody = () => {
   );
 };
 
-export default MainBody;
+export default Page;

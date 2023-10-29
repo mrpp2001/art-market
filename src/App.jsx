@@ -1,11 +1,13 @@
-import MainBody from "./components/MainBody";
-import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+import Page from "./components/Page";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      <MainBody />
+      <Login/>
+      <SignUp/>
+      <Page />
     </>
   );
 }

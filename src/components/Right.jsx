@@ -1,4 +1,3 @@
-import React from "react";
 
 import user1 from "../assets/user/Thomas-Edward.png";
 import user2 from "../assets/user/Chris-Doe.png";
